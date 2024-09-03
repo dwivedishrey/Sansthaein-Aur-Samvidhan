@@ -13,7 +13,7 @@ const Main = () => {
     <Navbar/>
     <About/>
     <Service/>
-    <FAQ/>
+   
     <ContactUS/>
     <Footer/>
     </>
