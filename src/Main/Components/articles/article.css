@@ -1,0 +1,56 @@
+.article-list {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff4e6;
+    height: 100vh;
+  }
+  
+  .article-card {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .article-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .article-image-large {
+    width: 300px;
+    margin: 20px 0;
+  }
+  
+  .read-more-button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .read-more-button:hover {
+    background-color: #45a049;
+  }
+  
+  .speak-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .speak-button:hover {
+    background-color: #e68a00;
+
+  }

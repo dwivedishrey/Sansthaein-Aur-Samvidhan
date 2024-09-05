@@ -2,22 +2,25 @@
 
 export default[
     {
-        img:"car.jpg",
-        name:"6 - 12 age",
-        des:"Need a new car? Learn about car buying experience, loan and insurance",
-        link:"https://handsonbanking.org/topics/cars/"
+        img:"kids.jpg",
+        name:"6 - 18 age",
+        des:"Curious About the Constitution? Discover How It Shapes Our Country—Just for Kids!",
+        link:'/kids'
     },
     {
-        img:"school.png",
-        name:"13 - 19 age",
-        des:"Explore school and career option after completing school, and financial consideration for both",
-        link:"https://handsonbanking.org/topics/after-high-school/"
+        "img": "middle.jpg",
+        "name": "18 - 40 age",
+        "des": "Explore how the Constitution impacts your rights, career, and daily life. Understand your role in governance and make informed decisions for your future.",
+        "link": '/teens'
     },
     {
-        img:"banking.png",
-        name:"20 - 40 age",
-        des:"Want to know about banking? Learn the (what, why, and how) of using a financial institution.",
-        link:"https://handsonbanking.org/topics/banking/"
-    },
+        "img": "older.jpg",
+        "name": "40+ age",
+        "des": "Discover how the Constitution protects your rights and influences society. Learn how to stay informed and engaged in shaping the future for the next generation.",
+        "link": '/elderly'
+    }
+    
+    
+    
    
 ]

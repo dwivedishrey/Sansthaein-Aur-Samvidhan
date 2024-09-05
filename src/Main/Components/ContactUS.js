@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Container, Typography } from '@mui/material';
-import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
+import './Navbar.css'; // Assuming your styles are in this file
 
 const ContactUS = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -19,46 +18,68 @@ const ContactUS = () => {
         },
         (error) => {
           console.log('FAILED...', error.text);
-        },
+        }
       );
   };
+
   const style = {
     backgroundImage: `url("indian5.jpg")`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-   height:'100px', // Adjust as needed
-    padding:0
+    height: '100vh', // Adjust height as needed
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+    color: '#fff',
+    padding: '20px',
+    textAlign: 'center',
   };
-  return (
-      <section style={style} className='contact'>
-      <div className='content'>  
-        <h2>Contact US</h2>
-        <p>Connect with us through email and give your feedback for services provided by us, let us connect, lets earn together and grow together.
-        </p>
-        </div>
-  
-      
-      <div className='contact-form'>
-        <h2>Send Message</h2>
-    <form ref={form} onSubmit={sendEmail}>
-      <div className='input-box'>
-   
-    <input type="text" placeholder=' Your Name' name="user_name" />
-      </div>
-      <div className='input-box'>
-    
-    <input type="email" placeholder=' Email' name="user_email" />
-      </div>
-      <div className='input-box'>
-  
-    <textarea placeholder='Write a Message' name="message" />
-      </div>
-    <input className='input-box' type="submit" value="Send" />
-  </form>
-  </div>
-      
-      </section>
-  )
-}
 
-export default ContactUS
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    zIndex: 1,
+  };
+
+  const contentStyle = {
+    zIndex: 2,
+    maxWidth: '800px',
+    width: '100%',
+    padding: '20px',
+  };
+
+  return (
+    <section style={style} className='contact'>
+      <div style={overlayStyle}></div>
+      <div className='content' style={contentStyle}>
+        <h2>Contact Us</h2>
+        <p>
+          Connect with us through email and give your feedback for services provided by us. Let us connect, let's earn together, and grow together.
+        </p>
+      </div>
+
+      <div className='contact-form' style={contentStyle}>
+        <h2>Send Message</h2>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className='input-box'>
+            <input type="text" placeholder='Your Name' name="user_name" />
+          </div>
+          <div className='input-box'>
+            <input type="email" placeholder='Email' name="user_email" />
+          </div>
+          <div className='input-box'>
+            <textarea placeholder='Write a Message' name="message" />
+          </div>
+          <input className='input-box' type="submit" value="Send" />
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default ContactUS;

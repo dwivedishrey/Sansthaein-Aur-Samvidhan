@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
-const pages = ['About', 'Services', 'FAQ', 'Contact', 'Login'];
+const pages = []; // Add your pages here
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -26,7 +26,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,1) 25%, rgba(22,121,171,1) 52%, rgba(4,4,18,1) 76%, rgba(5,5,21,1) 87%, rgba(8,8,35,1) 100%)' }}>
+    <AppBar position="static" style={{ background: 'linear-gradient(90deg, rgba(255,248,220,1) 25%, rgba(245,222,179,1) 52%, rgba(255,239,213,1) 76%, rgba(253,245,230,1) 87%, rgba(250,235,215,1) 100%)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img src='./logo.png' height='50px' alt='Logo' />
@@ -42,7 +42,7 @@ function Navbar() {
               fontWeight: 700,
               letterSpacing: '.3rem',
               marginLeft: '20px',
-              color: 'white',
+              color: '#333', // Changed text color to dark gray
               textDecoration: 'none',
             }}
           >
@@ -96,7 +96,7 @@ function Navbar() {
                       to={page.toLowerCase()}
                       smooth={true}
                       duration={500}
-                      style={{ marginLeft: "20px", cursor: 'pointer' }}
+                      style={{ marginLeft: "20px", cursor: 'pointer', color: '#333' }} // Adjusted color for better visibility
                     >
                       {page}
                     </Typography>
@@ -118,7 +118,7 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#333', // Changed text color to dark gray
               textDecoration: 'none',
             }}
           >
@@ -129,12 +129,12 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block'}}
+                sx={{ my: 2, color: '#333', display: 'block' }} // Adjusted color for better visibility
               >
                 {page === 'Login' ? (
                   <Link
                     to={`/${page.toLowerCase()}`}
-                    style={{ textDecoration: 'none', color: 'inherit' }}
+                    style={{ textDecoration: 'none', color: '#333' }} // Adjusted color for better visibility
                   >
                     {page}
                   </Link>
@@ -143,7 +143,7 @@ function Navbar() {
                     to={page.toLowerCase()}
                     smooth={true}
                     duration={500}
-                    style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+                    style={{ cursor: 'pointer', textDecoration: 'none', color: '#333' }} // Adjusted color for better visibility
                   >
                     {page}
                   </ScrollLink>

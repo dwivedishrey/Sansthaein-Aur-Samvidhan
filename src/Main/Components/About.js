@@ -1,32 +1,47 @@
-import React from 'react'
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import { purple } from '@mui/material/colors';
+import React from 'react';
 import "./Navbar.css";
-import { width } from '@fortawesome/free-brands-svg-icons/fa42Group';
-
 
 const About = () => {
     const style = {
-        backgroundImage: `url("indian8.webp")`,
+        backgroundImage: `url("about.jpg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh', // Adjust as needed
-        padding:0
-        
-      };
-  return (
-    <div id="about" className='about-container' style={style}>
-      <div className='about-text'>
-      <h1> Embark on Your Constitutional Journey</h1>
-      <p style={{ width: "800px" }}>
-  Embarking on your journey to understand the Constitution of India can feel overwhelming, but with the right tools and insights, you can explore this foundational document with clarity and ease. Sansthaein Aur Samvidhan is designed to guide you through the complexities of constitutional principles, offering an engaging and interactive experience. Our platform aims to simplify the key concepts of governance—Legislature, Executive, and Judiciary—through immersive games and activities, making learning both accessible and enjoyable. Dive into the essence of India's Constitution and discover how its principles shape our society and governance.
-</p>
-     
-      </div>
-    </div>
-  )
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#fff',
+        position: 'relative',
+        textAlign: 'center',
+    };
+
+    const overlayStyle = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        zIndex: 1,
+    };
+
+    const contentStyle = {
+        zIndex: 2,
+        maxWidth: '800px',
+        padding: '20px',
+    };
+
+    return (
+        <div id="about" className="about-container" style={style}>
+            <div style={overlayStyle}></div>
+            <div className="about-text" style={contentStyle}>
+                <h1>Embark on Your Constitutional Journey</h1>
+                <p>
+                    Understanding the Constitution can be challenging, but <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Sansthaein Aur Samvidhan</span> makes it simple and fun. Our platform offers engaging games and activities that simplify key concepts like the Legislature, Executive, and Judiciary. Dive in and see how the Constitution shapes our society and governance!
+                </p>
+            </div>
+        </div>
+    );
 }
 
-export default About
+export default About;
